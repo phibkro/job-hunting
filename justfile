@@ -1,0 +1,33 @@
+# job-hunting build commands — run inside the dev shell (direnv / nix develop)
+
+# list recipes
+default:
+    @just --list
+
+# compile one document: just build cv-rema
+build name:
+    mkdir -p dist
+    typst compile src/{{name}}.typ dist/{{name}}.pdf
+
+# compile every src/*.typ into dist/
+build-all:
+    mkdir -p dist
+    for f in src/*.typ; do \
+        name=$(basename "$f" .typ); \
+        echo "→ $name"; \
+        typst compile "$f" "dist/$name.pdf"; \
+    done
+
+# live-recompile while editing: just watch cover-rema
+watch name:
+    mkdir -p dist
+    typst watch src/{{name}}.typ dist/{{name}}.pdf
+
+# start a new cover letter from an existing one: just new-cover acme cover-rema
+new-cover company template="cover-rema":
+    cp src/{{template}}.typ src/cover-{{company}}.typ
+    @echo "created src/cover-{{company}}.typ (from {{template}})"
+
+# remove generated outputs
+clean:
+    rm -rf dist

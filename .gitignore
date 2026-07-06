@@ -1,0 +1,6 @@
+# generated outputs — derivations of src/, rebuild with `just build-all`
+dist/
+
+# nix / direnv
+.direnv/
+result

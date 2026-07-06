@@ -1,7 +1,7 @@
 # job-hunting
 
 Pipeline for finding and landing a technical-support role in Oslo/Norway.
-Tracking lives in Linear (project **job-hunt**, team Arete); documents live here.
+Tracking lives in Linear ([project **job-hunt**](https://linear.app/phibkro/project/job-hunt-44a5589ca17d), team Personal); documents live here.
 
 ## The model: a pipeline, not a waterfall
 
@@ -32,9 +32,6 @@ issue needs and how fast it should move:
 | **In Review** | assessment / interview prep | submitted; waiting, tests, prep, mock interviews | days–weeks, bursty |
 | **Done** | accepted 🎉 | followup: retro — what worked | — |
 | **Canceled** | rejected / withdrawn | followup: retro — what to fix, feed back into CV | — |
-
-> ⚠ The Arete team has no "In Review" state yet — add it once in
-> Linear → team settings → Workflow (the API can't create states).
 
 **Work-mode rule of thumb:** Backlog/Todo is breadth (volume discipline,
 kill fast); In Progress is depth (quality, genuine tailoring); In Review is

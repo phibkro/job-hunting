@@ -31,7 +31,10 @@ MUNICIPALITIES = {"OSLO"}
 SUPPORT_RX = re.compile(
     r"brukerstøtte|servicedesk|service\s*desk|helpdesk|help\s*desk"
     r"|\bsupport\b|1\.\s*linje|2\.\s*linje|førstelinje|andrelinje"
-    r"|desktop\s*support|end[ -]user|brukernær",
+    r"|desktop\s*support|end[ -]user|brukernær"
+    # tier-1b: AV / learning-tech support (docs/positioning.md)
+    r"|av-?teknik\w*|audiovisu\w*|læringsteknologi|undervisningsteknologi"
+    r"|digital\s+eksamen|driftstekniker|onsite",
     re.I,
 )
 IT_RX = re.compile(
@@ -139,7 +142,8 @@ def main():
     for ad in candidates:
         due = (ad.get("applicationDue") or "")[:10]
         print(f" · {ad['employer']['name']} — {ad['title']}")
-        print(f"   due {due or '?'} | {ad['link']}")
+        print(f"   {ad.get('sector', '?')} | {ad.get('engagementtype', '?')}/{ad.get('extent', '?')} "
+              f"| due {due or '?'} | {ad['link']}")
 
     if closed:
         print(f"\n=== {len(closed)} surfaced ad(s) went INACTIVE (close their issues) ===")

@@ -23,8 +23,16 @@ band are we applying in".
     are in range — 3 years informatics is relevant høyere utdanning.
   - **Strategy: finishing the 2 exams unlocks the bachelor-gated band.**
     Roles like P-156 (min. bachelorgrad, 540–667k) become reachable.
-- **Role thesis:** technical support where computer expertise meets
-  connecting with the people being helped. Both axes must be present.
+- **Role thesis (confirmed 2026-07-09):** software engineering is the
+  hobby/passion track, not the career track. The job should be **bounded**
+  (work stays at work: no on-call, no take-home problems) and spend the
+  *social* energy channel, preserving the deep-focus budget for passion
+  projects. Ikigai frame: exercise technical expertise + feel connected
+  + useful to wider society. Support-band roles are the target *by
+  preference*, not as a fallback — this dissolves the "overqualified
+  flight risk" objection in applications, and can be said honestly.
+  Corollary: pure dev roles compete with passion projects for the same
+  cognitive budget → deprioritized (P-160 Spond = lottery ticket only).
 - **Location:** Oslo.
 - Open to adjacent dev roles at near-zero application cost
   (e.g. Spond "søk uten CV" — P-160), but support band is the target.

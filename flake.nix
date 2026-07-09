@@ -11,7 +11,7 @@
       fonts = [ pkgs.carlito pkgs.liberation_ttf ];
     in {
       devShells.${system}.default = pkgs.mkShell {
-        packages = [ pkgs.typst pkgs.just pkgs.chromium ] ++ fonts;
+        packages = [ pkgs.typst pkgs.just pkgs.chromium pkgs.python3 ] ++ fonts;
         TYPST_FONT_PATHS = pkgs.lib.makeSearchPath "share/fonts" fonts;
         # agent-browser's auto-downloaded Chrome is an FHS binary and can't
         # run on NixOS; point it at nix-built chromium instead

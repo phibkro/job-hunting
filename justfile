@@ -28,6 +28,10 @@ new-cover company template="cover-rema":
     cp src/{{template}}.typ src/cover-{{company}}.typ
     @echo "created src/cover-{{company}}.typ (from {{template}})"
 
+# poll NAV feed for new Oslo IT-support listings: just poll [--since 2026-07-08] [--dry]
+poll *args:
+    python3 scripts/poll_nav.py {{args}}
+
 # remove generated outputs
 clean:
     rm -rf dist

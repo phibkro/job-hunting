@@ -56,5 +56,17 @@ just build <name>       compile one doc (e.g. just build cv-rema)
 just build-all          compile everything in src/
 just watch <name>       live-recompile while editing
 just new-cover <company> [template]   start a cover letter from an existing one
+just poll               poll NAV feed for new Oslo IT-support listings
 just clean              remove dist/
 ```
+
+## Intake flow (NAV feed)
+
+`just poll` fetches feed changes since the last run (state in `.state/`,
+1h overlap), filters Oslo + IT/support signals, writes candidates to
+`intake/<timestamp>.json`, and reports surfaced ads that went INACTIVE
+(close their Linear issues). New candidates get filed as Backlog issues
+in Linear — currently done by Claude in-session from the intake file.
+Channel details and filter rationale: [docs/intake-channels.md](docs/intake-channels.md).
+Uses NAV's rotating public token; switch to a private token
+(email nav.team.arbeidsplassen@nav.no) for unattended use.

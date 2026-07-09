@@ -9,11 +9,12 @@ build name:
     mkdir -p dist
     typst compile src/{{name}}.typ dist/{{name}}.pdf
 
-# compile every src/*.typ into dist/
+# compile every src/*.typ into dist/ (skips _lib-style shared files)
 build-all:
     mkdir -p dist
     for f in src/*.typ; do \
         name=$(basename "$f" .typ); \
+        case "$name" in _*) continue;; esac; \
         echo "→ $name"; \
         typst compile "$f" "dist/$name.pdf"; \
     done

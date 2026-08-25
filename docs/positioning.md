@@ -10,6 +10,14 @@ band are we applying in".
   expertise exists but no work artifacts or formal qualifications to prove
   seniority. Do not target roles requiring provable senior experience
   (e.g. senioringeniør titles → out of range; killed P-158 on this).
+  - **Uoffisiell programmeringserfaring: 5+ år per 2026.** Første offentlige
+    repo jan 2021 (rock-paper-scissors, JS); VGS-årene ca. 2018–20 hviler på
+    Philips opplysning (ikke repo-dokumentert). Daglig koding siden
+    Odin-sommeren 2022. Regelen: dette TELLER der annonser ber om «erfaring
+    med programmering» / «noen års erfaring» uten ordet yrkes-/jobb-, jf.
+    Folq «noen års erfaring som utvikler, alt fra et par år og oppover». Det
+    teller IKKE der annonsen eksplisitt krever erfaring fra tilsvarende
+    stillinger eller jobbår — da er vi fortsatt entry-level.
 - **Education: Informatics bachelor at NTNU, incomplete.** 3 years done,
   2 failed exams remain before the degree is awarded.
   - CV framing (Philip, 2026-08-25): write "Informatikk(studier) — NTNU"

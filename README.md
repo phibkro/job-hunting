@@ -67,6 +67,9 @@ just clean              remove dist/
 `intake/<timestamp>.json`, and reports surfaced ads that went INACTIVE
 (close their Linear issues). New candidates get filed as Backlog issues
 in Linear — currently done by Claude in-session from the intake file.
+Linear filing can be automated by setting `LINEAR_API_KEY` (Linear →
+Settings → API) in the environment; without it, Backlog triage happens
+manually from the intake file / chat summaries.
 Channel details and filter rationale: [docs/intake-channels.md](docs/intake-channels.md).
 Uses NAV's rotating public token; switch to a private token
 (email nav.team.arbeidsplassen@nav.no) for unattended use.

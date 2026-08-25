@@ -24,19 +24,26 @@ band are we applying in".
     are in range — 3 years informatics is relevant høyere utdanning.
   - **Strategy: finishing the 2 exams unlocks the bachelor-gated band.**
     Roles like P-156 (min. bachelorgrad, 540–667k) become reachable.
-- **Role thesis (confirmed 2026-07-09):** software engineering is the
-  hobby/passion track, not the career track. The job should be **bounded**
-  (work stays at work: no on-call, no take-home problems) and spend the
-  *social* energy channel, preserving the deep-focus budget for passion
-  projects. Ikigai frame: exercise technical expertise + feel connected
-  + useful to wider society. Support-band roles are the target *by
-  preference*, not as a fallback — this dissolves the "overqualified
-  flight risk" objection in applications, and can be said honestly.
-  Corollary: pure dev roles compete with passion projects for the same
-  cognitive budget → deprioritized (P-160 Spond = lottery ticket only).
+- **Role thesis (revised 2026-08-25, endret fra support-primær):**
+  **developer roles are now the primary band.** IT-support is the
+  secondary band and is still actively pursued where the cost of
+  applying is low — it is not abandoned. History, kept for honesty:
+  the thesis confirmed 2026-07-09 held that software engineering was
+  the hobby/passion track, not the career track, and that the job
+  should be **bounded** (work stays at work: no on-call, no take-home
+  problems) while spending the *social* energy channel, preserving the
+  deep-focus budget for passion projects. Ikigai frame: exercise
+  technical expertise + feel connected + useful to wider society. That
+  bounded-work argument stood behind the old support-by-preference
+  stance (it dissolved the "overqualified flight risk" objection) —
+  it remains true as written but no longer governs targeting; the same
+  goes for its corollary that pure dev roles compete with passion
+  projects for the same cognitive budget (P-160 Spond = lottery ticket
+  only).
 - **Location:** Oslo.
 - Open to adjacent dev roles at near-zero application cost
-  (e.g. Spond "søk uten CV" — P-160), but support band is the target.
+  (e.g. Spond "søk uten CV" — P-160); with the 2026-08-25 flip these
+  are now primary-band applications rather than exceptions.
 
 ## Still to decide
 

@@ -1,6 +1,7 @@
 # job-hunting
 
-Pipeline for finding and landing a technical-support role in Oslo/Norway.
+Pipeline for landing a developer role (primary) or an IT-support role
+(secondary) in Oslo/Norway.
 Tracking lives in Linear ([project **job-hunt**](https://linear.app/phibkro/project/job-hunt-44a5589ca17d), team Personal); documents live here.
 
 ## The model: a pipeline, not a waterfall

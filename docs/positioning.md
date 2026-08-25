@@ -48,6 +48,33 @@ band are we applying in".
   goes for its corollary that pure dev roles compete with passion
   projects for the same cognitive budget (P-160 Spond = lottery ticket
   only).
+- **Teknisk retning (2026-08-25):**
+  - **FP:** elsket — matematiske egenskaper brukes til å resonnere om data
+    og beregning i stedet for ad-hoc OOP/imperative teknikker; komposisjon
+    er konge. Praksis: redusere mutable state, modellere state som et
+    snapshot av historikken.
+  - **Arc:** basic web programming → React føltes mektig (code reuse,
+    kompleks UI) → interessen vokste med erfaringen inn i system design.
+    Videre intensjon: fortsette å lære og øve på disse mønstrene ved å
+    anvende dem i virkelige, håndgripelige systemer — og se resultatet.
+  - **Distributed systems & DDD:** design med CALM theorem i tankene —
+    monotonicity for å unngå komplisert koordinering; DDD rundt algebraic,
+    coalgebraic og category-theoretic egenskaper.
+  - **Actors & CAS:** systems of systems modelleres som actors som sender
+    meldinger til hverandre; de vanskeligste systemene har menneske-/
+    agent-komponenter — emergente, ikke-deterministiske → Complex
+    Adaptive Systems.
+  - **Agent-orkestrering:** kraften kommer mindre fra predefined
+    procedural workflows, mer fra å modellere STATE TRANSITIONS der
+    requirements og GATES er enforcement — agentene får løpe autonomt
+    mot konkrete mål.
+  - **Systems theory:** Meadows' 12 leverage points, Beer's VSM,
+    cybernetics/feedback loops — sentrale i analyse og design av
+    komplekse systemer.
+  - **Målretning:** primærbåndet prioriterer nå roller med domenetunge
+    produkter, distribuerte systemer og AI-agentplattformer/-verktøy
+    (Spond-klassen er oppgradert fra lotteribillett til prioritetsmål);
+    support-sekundærbåndet røres ikke.
 - **Location:** Oslo.
 - Open to adjacent dev roles at near-zero application cost
   (e.g. Spond "søk uten CV" — P-160); with the 2026-08-25 flip these

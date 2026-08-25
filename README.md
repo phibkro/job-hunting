@@ -41,10 +41,14 @@ breadth stages or vice versa.
 ## Repo layout
 
 ```
-src/    typst sources — the single source of truth
-  cv*.typ       CV variants (cv = base/drift, cv-fullstack, cv-rema…)
-  cover-*.typ   one cover letter per company
-dist/   compiled PDFs — generated, gitignored, never edited
+src/       typst sources — the single source of truth
+  cv*.typ        CV variants (cv = base/drift, cv-support = support band, …)
+  cover-*.typ    one cover letter per company
+listings/  per-listing card: stage, verdict, salary, links (feeds `just stack`)
+dist/      compiled PDFs — generated, gitignored, never edited
+  stacks/<slug>.pdf   application stack per listing: annonseside (status +
+                      full ad) → CV → letter; built by `just stack` from
+                      intake + listings + src
 ```
 
 ## Commands
@@ -59,6 +63,7 @@ just new-cover <company> [template]   start a cover letter from an existing one
 just poll               poll NAV feed for new Oslo IT-support listings
 just clean              remove dist/
 ```
+just stack [slug]       build application stack PDF(s) from listings/
 
 ## Intake flow (NAV feed)
 

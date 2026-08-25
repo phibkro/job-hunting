@@ -1,5 +1,7 @@
 # generated outputs — derivations of src/, rebuild with `just build-all`
 dist/
+src/_annonse-*.typ
+dist/stacks/_*
 
 # nix / direnv
 .direnv/

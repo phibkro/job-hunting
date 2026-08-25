@@ -36,3 +36,7 @@ poll *args:
 # remove generated outputs
 clean:
     rm -rf dist
+
+# build application stack PDF(s): just stack [slug ...]  (all listings by default)
+stack *args:
+    python3 scripts/gen_stack.py {{args}}

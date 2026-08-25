@@ -4,6 +4,7 @@ text) -> CV -> cover letter.
 
 Sources of truth (never duplicated):
   intake/*.json          NAV feed snapshots (ad found here by uuid prefix)
+  intake/finn/<uuid>.md  finn.no ads as scraped markdown (fallback lookup)
   listings/<slug>.json   per-listing status/profile card (hand/agent edited)
   src/cv*.typ            CV variants
   src/cover-*.typ        letters
@@ -25,6 +26,9 @@ ROOT = Path(__file__).resolve().parent.parent
 INTAKE_GLOB = "intake/*.json"
 LISTINGS_DIR = ROOT / "listings"
 DIST_STACKS = ROOT / "dist" / "stacks"
+FINN_DIR = ROOT / "intake" / "finn"
+FINN_URL_RE = re.compile(r"https?://\S+")
+FINN_BULLET_KEYS = ("Bedrift", "Frist", "Sted", "Sektor/Omfang", "FINN-kode", "Søknad")
 
 TYPST_ESCAPES = {
     "\\": "\\\\",
@@ -53,6 +57,36 @@ def find_ad(uuid_prefix: str) -> dict | None:
     return None
 
 
+def find_finn_ad(uuid_prefix: str) -> dict | None:
+    for path in sorted(FINN_DIR.glob("*.md")):
+        if path.stem.startswith(uuid_prefix):
+            return parse_finn_md(path.read_text())
+    return None
+
+
+def parse_finn_md(text: str) -> dict:
+    """Parse a scraped finn.no markdown ad: '# <title>', '- Key: value' bullets,
+    optional prose blocks, and the plain-text body after '## Annonsetekst'."""
+    fields: dict[str, str] = {}
+    title = ""
+    body = ""
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        if not title and line.startswith("# "):
+            title = line[2:].strip()
+            continue
+        for key in FINN_BULLET_KEYS:
+            prefix = f"- {key}:"
+            if line.startswith(prefix):
+                fields[key] = line[len(prefix):].strip()
+                break
+        else:
+            if line.startswith("## Annonsetekst"):
+                body = "\n".join(lines[i + 1:]).strip()
+                break
+    return {"title": title, "body": body, **fields}
+
+
 def html_to_text(raw: str) -> str:
     """Crude but readable HTML->plain-text for ad bodies."""
     s = raw
@@ -67,39 +101,17 @@ def html_to_text(raw: str) -> str:
     return s.strip()
 
 
-def build_annonse_typ(card: dict, ad: dict) -> str:
-    contacts = "\n".join(
-        f"- {esc(p.get('name', '?'))}"
-        + (f", {esc(p['title'])}" if p.get("title") else "")
-        + (f" — {esc(p['email'])}" if p.get("email") else "")
-        + (f" — {esc(p['phone'])}" if p.get("phone") else "")
-        for p in ad.get("contactList", [])
-    ) or "- (ingen oppgitt)"
-    loc = ", ".join(
-        f"{loc_item.get('city', '')} {loc_item.get('postalCode', '')}".strip()
-        for loc_item in ad.get("workLocations", [])
-    )
-    body = html_to_text(ad.get("description", ""))
+def link_row(label, url):
+    u = esc(url)
+    return f'*{label}:* #link("{u}")[{u}]'
 
-    def link_row(label, url):
-        u = esc(url)
-        return f'*{label}:* #link("{u}")[{u}]'
 
-    def row(label, val):
-        return f"*{label}:* {val}"
+def row(label, val):
+    return f"*{label}:* {val}"
 
-    meta = " \\\\\n".join(
-        [
-            row("Stilling", esc(ad.get("title", "?"))),
-            row("Arbeidsgiver", esc(ad.get("employer", {}).get("name", "?"))),
-            row("Sektor / omfang", f"{esc(ad.get('sector', '?'))} / {esc(ad.get('extent', '?'))}, {esc(ad.get('engagementtype', '?'))}"),
-            row("Sted", esc(loc)),
-            row("Frist", esc(str(ad.get("applicationDue", ad.get("expires", "?")))[:10])),
-            link_row("Søk her", ad.get("applicationUrl") or ad.get("sourceurl") or ad.get("link", "?")),
-            link_row("NAV-lenke", ad.get("link", "")),
-        ]
-    )
 
+def _annonse_typ(card: dict, meta: str, contacts: str, body: str) -> str:
+    """Shared annonse-side template; meta/contacts/body arrive typst-escaped."""
     status_rows = "\n".join(f"- *{esc(k)}:* {esc(v)}" for k, v in [
         ("Stage", card.get("stage", "Todo")),
         ("Neste handling", card.get("next_action", "")),
@@ -129,9 +141,58 @@ def build_annonse_typ(card: dict, ad: dict) -> str:
 #section[Annonse]
 #block(above: 0.9em, below: 0.9em)[
 #text(size: 9pt)[
-{esc(body)}
+{body}
 ]]
 """
+
+
+def build_annonse_typ(card: dict, ad: dict) -> str:
+    contacts = "\n".join(
+        f"- {esc(p.get('name', '?'))}"
+        + (f", {esc(p['title'])}" if p.get("title") else "")
+        + (f" — {esc(p['email'])}" if p.get("email") else "")
+        + (f" — {esc(p['phone'])}" if p.get("phone") else "")
+        for p in ad.get("contactList", [])
+    ) or "- (ingen oppgitt)"
+    loc = ", ".join(
+        f"{loc_item.get('city', '')} {loc_item.get('postalCode', '')}".strip()
+        for loc_item in ad.get("workLocations", [])
+    )
+    meta = " \\\\\n".join(
+        [
+            row("Stilling", esc(ad.get("title", "?"))),
+            row("Arbeidsgiver", esc(ad.get("employer", {}).get("name", "?"))),
+            row("Sektor / omfang", f"{esc(ad.get('sector', '?'))} / {esc(ad.get('extent', '?'))}, {esc(ad.get('engagementtype', '?'))}"),
+            row("Sted", esc(loc)),
+            row("Frist", esc(str(ad.get("applicationDue", ad.get("expires", "?")))[:10])),
+            link_row("Søk her", ad.get("applicationUrl") or ad.get("sourceurl") or ad.get("link", "?")),
+            link_row("NAV-lenke", ad.get("link", "")),
+        ]
+    )
+    return _annonse_typ(card, meta, contacts, esc(html_to_text(ad.get("description", ""))))
+
+
+def build_finn_annonse_typ(card: dict, md: dict) -> str:
+    """Annonse-side from an intake/finn markdown ad: no NAV-lenke row, and
+    kontakten always deferred to the ad text itself."""
+    apply_val = md.get("Søknad", "")
+    url_match = FINN_URL_RE.search(apply_val)
+    soknad = (
+        link_row("Søknad", url_match.group(0))
+        if url_match
+        else row("Søknad", esc(apply_val or "?"))
+    )
+    meta = " \\\\\n".join(
+        [
+            row("Stilling", esc(md["title"] or "?")),
+            row("Arbeidsgiver", esc(md.get("Bedrift", "?"))),
+            row("Sektor / omfang", esc(md.get("Sektor/Omfang", "?"))),
+            row("Sted", esc(md.get("Sted", "?"))),
+            row("Frist", esc(md.get("Frist", "?"))),
+            soknad,
+        ]
+    )
+    return _annonse_typ(card, meta, "- (kontakt oppgitt i annonsen)", esc(md["body"]))
 
 
 def run(cmd: list[str]) -> None:
@@ -147,18 +208,25 @@ def build(slug: str) -> Path | None:
         return None
     card = json.loads(card_path.read_text())
     ad = find_ad(card["uuid"])
-    if not ad:
-        raise SystemExit(f"{slug}: fant ikke annonsen i intake/ (uuid {card['uuid']})")
+    if ad:
+        annonse_src = build_annonse_typ(card, ad)
+    else:
+        finn_ad = find_finn_ad(card["uuid"])
+        if not finn_ad:
+            raise SystemExit(
+                f"{slug}: fant ikke annonsen i intake/ eller intake/finn/ (uuid {card['uuid']})"
+            )
+        annonse_src = build_finn_annonse_typ(card, finn_ad)
 
     DIST_STACKS.mkdir(parents=True, exist_ok=True)
     parts: list[Path] = []
 
-    annonse_typ = ROOT / "src" / f"_annonse-{slug}.typ"
+    annonse_path = ROOT / "src" / f"_annonse-{slug}.typ"
     annonse_pdf = DIST_STACKS / f"_annonse-{slug}.pdf"
-    annonse_typ.write_text(build_annonse_typ(card, ad))
-    run(["typst", "compile", str(annonse_typ), str(annonse_pdf)])
+    annonse_path.write_text(annonse_src)
+    run(["typst", "compile", str(annonse_path), str(annonse_pdf)])
     parts.append(annonse_pdf)
-    annonse_typ.unlink(missing_ok=True)
+    annonse_path.unlink(missing_ok=True)
 
     cv_name = card.get("cv")
     if cv_name and (ROOT / "src" / f"{cv_name}.typ").exists():

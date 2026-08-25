@@ -37,4 +37,6 @@ education row says "Høst 2023 – Vår 2026" — reads as completed/completing
 now. With 2 exams outstanding this is false and contradicts the transcript
 public-sector applications require. Rephrase to honest form, e.g.
 "Informatikkstudier, NTNU (fullfører siste eksamener &lt;når&gt;)".
-Blocked on: when Philip plans to sit the 2 exams (kont i august?).
+Rephrase done 2026-08-25 (all CV variants). Exams: Philip plans to sit the
+2 remaining exams autumn 2026 — "fullfører siste eksamener"-claims stay true;
+CVs no longer volunteer exam status at all (Philip discloses verbally).

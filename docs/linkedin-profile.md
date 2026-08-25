@@ -42,7 +42,8 @@ Fullstack developer | TypeScript · React · Next.js | Runs a NixOS homelab sinc
 ## 3. «Om»-seksjonen (Under 2000 tegn — tell tegn etter liming)
 
 Nåversjon — fusjonert med Philips levende «Om»-tekst (selvlært→informatikk-buen,
-systemmodelleringen og de to byggeprosjektene) — målt til **1999 tegn**.
+systemmodelleringen og de to byggeprosjektene) + kodingsopprinnelsen fra
+videregående (ny fakt, 2026-08-25) — målt til **1994 tegn**.
 
 ```
 Hei — takk for at du leser.
@@ -52,17 +53,19 @@ utvikling er retningen jeg har valgt. Det som driver meg er tekniske detaljer i 
 for brukeropplevelsen: en utvikler som har sittet på supportbenken og hatt daglig
 kundekontakt bygger for menneskene som skal bruke det.
 
+Jeg har kodet siden videregående (web og litt Python); TypeScript og React har
+fulgt daglig siden Odin Project-sommeren 2022.
+
 Første smaken fikk jeg som IT-konsulent i Kamy Kommunikasjon sommeren 2020:
 førstelinje-brukerstøtte for klienter med svært ulik teknisk bakgrunn. Siden den sommeren
-har feilsøkingen vært daglig kost — i eget hjemmelaboratorium; fire Linux-maskiner (NixOS)
+er feilsøkingen daglig kost i hjemmelaboratoriet; fire Linux-maskiner (NixOS)
 og én Mac i drift siden 2020, med nettverk (DNS, VPN/Tailscale), fildeling, backup og
 overvåking for familien. Alt ligger som konfigurasjon som kode på
-github.com/phibkro/homelab. Når DNS-en faller ut klokka elleve om kvelden, er det jeg som
-sitter med den.
+github.com/phibkro/homelab.
 
 Jeg skriver TypeScript, React og Next.js; REST-API og SQL kommer fra studiet og
 teamprosjektene (Buddyblast i Scrum; Vektorprogrammet PHP→React, frivillig). Den dype
-interessen er systemmodellering: hvordan ting konstrueres og observeres — algebra,
+interessen er systemmodellering — algebra,
 coalgebra og category theory gir egenskaper å resonere ut fra: pålitelighet, sikkerhet,
 ytelse. Jeg bygger et programmeringsspråk for domenemodeller — abstrakte teorier, konkrete
 modeller, kjørbare realiseringer — og et praktisk prosjekt-OS der AI-agenter drifter
@@ -76,7 +79,7 @@ behersker jeg godt fra brukersiden; ITIL kjenner jeg som rammeverk.
 Etter Kamy har jeg jobbet i daglig kundekontakt (Skafferiet, 2021–22) og lært å lese hva
 folk trenger — det bygger jeg videre på.
 
-Høres dette ut som noen dere kunne tenkt dere å snakke med? Send meg en melding her, eller
+Høres dette ut som noen dere kunne tenkt dere å snakke med? Send meg en melding her eller
 på philib.krogh@gmail.com / +47 468 99 829.
 ```
 

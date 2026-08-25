@@ -17,14 +17,28 @@ history, github.com/phibkro (50 repos, surveyed 2026-07-09).
 
 ## GitHub narrative (github.com/phibkro)
 
-4-year visible progression, good interview story:
-2022 Odin Project (self-taught origin) → 2023 frontend challenges →
-2023–25 NTNU coursework (Java OOP, software eng, algorithms, databases,
-compilers TDT4205, OS, machine-near C, Scala) → 2025 systems (lox
-interpreter in Rust, ray-tracing + os-in-1k-loc in Zig) → 2026 infra +
-PL research (homelab, snowy, pagu-box, nixpkgs-agent, rice-registry,
-**bang** — effect-typed language in Lean with verified compilation,
-active daily) + agentic dev (vevx, nixpkgs-agent).
+~5-year visible GitHub progression (first public repo jan. 2021) over a
+longer untold arc, per Philip 2026-08-25: started coding in videregående —
+VGS2/VGS3 ca. 2018–2020, webprogrammering + litt Python [ingen offentlige
+repoer fra denne perioden; årene hviler på Philips opplysning, ikke
+repo-datoer] → UiO årsstudium i informatikk (Høst 2020, IKKE fullført —
+Covid-19 + motivasjon) → sommer med selvstudium i moderne webutvikling via
+Mozillas web-guides + The Odin Project, synlig på GitHub (odin-recipes
+opprettet 2022-04-15, odin-landing-page 2022-04-16 [år bekreftes av
+GitHub-repo-datoer: 2022]) → 2023 frontend challenges → 2023–25 NTNU
+coursework (Java OOP, software eng, algorithms, databases, compilers
+TDT4205, OS, machine-near C, Scala) → 2025 systems (lox interpreter in
+Rust, ray-tracing + os-in-1k-loc in Zig) → 2026 infra + PL research
+(homelab, snowy, pagu-box, nixpkgs-agent, rice-registry, **bang** —
+effect-typed language in Lean with verified compilation, active daily) +
+agentic dev (vevx, nixpkgs-agent).
+
+Momentum-faktum (Philip, 2026-08-25): 6 emner bestått i de to første
+NTNU-semestrene — tilskrevet flerårig fritidskoding før bachelor-start.
+
+[Merknad: Philips selvbeskrivelse fra 2026-08-25 om dyp TypeScript/React-
+kompetanse skal IKKE skrives inn noen sted — orkestratorbeslutning pendler;
+TS/React-dybde vises kun gjennom eksisterende evidens-tagger.]
 
 Honest framing per Philip: broad experience web → agentic, few shipped
 projects, student projects "shipped with minimal ambition". Don't oversell

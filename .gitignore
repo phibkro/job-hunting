@@ -2,6 +2,7 @@
 dist/
 src/_annonse-*.typ
 dist/stacks/_*
+listings/_annonse-*.typ
 
 # nix / direnv
 .direnv/

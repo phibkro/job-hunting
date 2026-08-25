@@ -12,10 +12,11 @@ band are we applying in".
   (e.g. senioringeniør titles → out of range; killed P-158 on this).
 - **Education: Informatics bachelor at NTNU, incomplete.** 3 years done,
   2 failed exams remain before the degree is awarded.
-  - CV framing: state it honestly ("3 år informatikk, NTNU — fullfører
-    siste eksamener"); never claim the degree. Public-sector applications
-    (Jobbnorge/Webcruiter) require transcript upload, so the CV must match
-    the karakterutskrift.
+  - CV framing (Philip, 2026-08-25): write "Informatikk(studier) — NTNU"
+    with dates only. Never claim the degree, but do NOT volunteer exam
+    status on the CV either — Philip discloses the outstanding exams
+    verbally if asked. Transcript uploads (public sector) still govern:
+    the CV must never contradict the karakterutskrift.
   - Listings requiring "fullført bachelorgrad" as minimum krav are hard
     gates in the public sector (kvalifikasjonsprinsippet) → out of range
     until the degree is done.

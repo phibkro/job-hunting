@@ -105,7 +105,7 @@ my own workflow, and I want to work somewhere putting them to real use.
 
 #section[Education]
 
-#edu[BSc Informatics — NTNU, Trondheim][2023 – present]
+#edu[BSc Informatics studies — NTNU, Trondheim][2023 – present]
 #edu[Digital Creativity — Folkehøgskolen Sørlandet][2022 – 2023]
 #edu[Creative Industries Management — BI, Oslo][2021]
 #edu[Informatics (year unit) — University of Oslo][2020]

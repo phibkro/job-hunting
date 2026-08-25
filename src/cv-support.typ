@@ -57,7 +57,7 @@
 
 #section[Utdanning]
 
-#edu[Informatikk — NTNU, Trondheim (fullfører siste eksamener høsten 2026)][2023 – 2026]
+#edu[Informatikk — NTNU, Trondheim][2023 – 2026]
 #edu[Digital Kreativitet — Folkehøgskolen Sørlandet][2022 – 2023]
 #edu[Creative Industries Management — BI, Oslo][Høst 2021]
 #edu[Årsstudium i Informatikk — UiO][Høst 2020]

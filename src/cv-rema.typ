@@ -78,7 +78,7 @@
   [
     #text(size: 21pt, weight: "bold")[Philip Bjørknes Krogh]
     #v(-0.55em)
-    #text(size: 11.5pt, fill: muted)[Bachelor i Informatikk, NTNU]
+    #text(size: 11.5pt, fill: muted)[Informatikkstudier, NTNU — fullfører siste eksamener]
   ],
 )
 
@@ -101,7 +101,7 @@ de er.
 
 #section[Utdanning]
 
-#edu[Bachelor i Informatikk — NTNU, Trondheim][Høst 2023 – pågår]
+#edu[Informatikk — NTNU, Trondheim][Høst 2023 – pågår]
 #edu[Digital Kreativitet — Folkehøgskolen Sørlandet][Høst 2022 – Vår 2023]
 #edu[Creative Industries Management — BI, Oslo][Høst 2021]
 #edu[Årsstudium i Informatikk — UiO][Høst 2020]

@@ -78,7 +78,7 @@
   [
     #text(size: 21pt, weight: "bold")[Philip Bjørknes Krogh]
     #v(-0.55em)
-    #text(size: 11.5pt, fill: muted)[Bachelor i Informatikk, NTNU (Sommer 2026)]
+    #text(size: 11.5pt, fill: muted)[Informatikkstudier, NTNU]
   ],
 )
 
@@ -99,7 +99,7 @@ som bruker dem. Trives i roller der tillit og tålmodighet er del av jobben.
 
 #section[Utdanning]
 
-#edu[Bachelor i Informatikk — NTNU, Trondheim][Høst 2023 – Vår 2026]
+#edu[Informatikk — NTNU, Trondheim][Høst 2023 – Vår 2026]
 #edu[Digital Kreativitet — Folkehøgskolen Sørlandet][Høst 2022 – Vår 2023]
 #edu[Creative Industries Management — BI, Oslo][Høst 2021]
 #edu[Årsstudium i Informatikk — UiO][Høst 2020]

@@ -62,8 +62,8 @@ just watch <name>       live-recompile while editing
 just new-cover <company> [template]   start a cover letter from an existing one
 just poll               poll NAV feed for new Oslo IT-support listings
 just clean              remove dist/
-```
 just stack [slug]       build application stack PDF(s) from listings/
+```
 
 ## Intake flow (NAV feed)
 

@@ -9,7 +9,7 @@ from each. Sources: deep-research run 2026-07-06 (101 agents, 19 sources,
 | Platform | Programmatic access | Verdict as intake channel |
 |---|---|---|
 | **arbeidsplassen.nav.no** | ✅ Official free feed API: `pam-stilling-feed.nav.no` — 3 GET endpoints, JWT bearer auth. Public rotating token at `/api/publicToken` (prototyping); stable private token via email to `nav.team.arbeidsplassen@nav.no` | **PRIMARY.** Legally sanctioned redistribution; database covers majority of all Norwegian public listings |
-| **finn.no** | ❌ Official API is business-customers-own-data only ("no access to non-business parties"). robots.txt + ToS prohibit scraping, citing åndsverksloven; job-aggregator bots are full-site blocked; ad pages themselves are server-rendered HTML (verified 2026-08-25: plain GET returns full ad body, no headless browser needed — only search/list pages are JS-heavy) | **Manual/browse only.** Largest gap in NAV feed (contractually excluded). Use saved-search email alerts ("Lagre søk") + manual browsing |
+| **finn.no** | ❌ Official API is business-customers-own-data only ("no access to non-business parties"). robots.txt + ToS prohibit scraping, citing åndsverksloven; job-aggregator bots are full-site blocked; ad pages themselves are server-rendered HTML (verified 2026-08-25: plain GET returns full ad body, no headless browser needed — only search/list pages are JS-heavy). UPDATE 2026-08-25: operator sanctioned a personal-scale watcher (scripts/finn_watch.py, `just finn`) — ≤20 ads/run, ≥3 s spacing, no republication; ToS prohibition otherwise stands | **Manual/browse + personal watcher.** Largest gap in NAV feed (contractually excluded). Saved-search email alerts ("Lagre søk") + `just finn` for Oslo searches; anything beyond the sanctioned scale still needs written permission |
 | **Teamtailor career sites** | ⚠ Official API needs per-company secret key (no cross-tenant). BUT each career site serves unauthenticated `{careersite}/jobs.json` (JSON Feed 1.1) | **SECONDARY** for target companies. ToS status of systematic use unassessed — fine at personal scale |
 | **RecMan career sites** | ⚠ `api.recman.io/v2` has jobPost scope, but per-tenant API keys only | Skip API; treat as ordinary web pages |
 | LinkedIn, kode24, TheHub, karriere.no, jobbdirekte, Webcruiter, Jobbnorge, EasyCruit, staffing agencies (Academic Work, Experis, Manpower, Randstad) | ❓ No verified claims in this pass | **Open — needs honing pass** |
@@ -50,7 +50,9 @@ from each. Sources: deep-research run 2026-07-06 (101 agents, 19 sources,
 2. Quantify finn.no-exclusives: 2026-08-25 side-evidence found ≥8 Oslo support-band listings on finn (Tind IT IT-Support, Documaster Technical Support, Upheads IT-Konsulent, Emma Systems Supportkonsulent, Save Solutions Teknisk support, Forsvaret IT Support, Kommunalbanken Sluttbruker-spesialist, Diakonissehuset M365-konsulent) that never surfaced via the NAV feed poller — the finn gap is real and sits exactly in the target band.
 3. Scalable discovery of Norwegian Teamtailor/RecMan career sites
    (e.g. partner.teamtailor.com/job_boards API) + terms check.
-4. Whether FINN grants written permission for small-scale personal use.
+4. Whether FINN grants written permission for use beyond the sanctioned
+   personal-scale watcher (`just finn`, ≤20 ads/run, ≥3 s spacing,
+   no republication — operator decision 2026-08-25).
 
 ## Caveats
 

@@ -62,6 +62,7 @@ just build-all          compile everything in src/
 just watch <name>       live-recompile while editing
 just new-cover <company> [template]   start a cover letter from an existing one
 just poll               poll NAV feed for new Oslo IT-support listings
+just finn               watch finn.no searches for new Oslo listings (--fetch-new files them as intake/finn/<kode>.md)
 just clean              remove dist/
 just stack [slug]       build application stack PDF(s) from listings/
 ```

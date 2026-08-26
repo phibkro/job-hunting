@@ -33,6 +33,10 @@ new-cover company template="cover-rema":
 poll *args:
     python3 scripts/poll_nav.py {{args}}
 
+# watch finn.no for new Oslo listings: just finn -q utvikler [--fetch-new] [--dry]
+finn *args:
+    python3 scripts/finn_watch.py {{args}}
+
 # remove generated outputs
 clean:
     rm -rf dist

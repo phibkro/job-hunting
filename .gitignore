@@ -11,3 +11,8 @@ result
 # poller runtime state and intake snapshots (tracked in Linear, not git)
 .state/
 intake/
+
+
+# local OS and editor files
+.DS_Store
+*.swp

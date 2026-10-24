@@ -96,7 +96,7 @@ my own workflow, and I want to work somewhere putting them to real use.
 
 #pts(
   [*Frontend & language:* TypeScript, React, Next.js, Node, HTML/CSS; also Python, Java, C],
-  [*Functional programming:* Haskell, Effect.ts, F\#, Clojure],
+  [*Functional programming:* Haskell, Effect.ts, F\#],
   [*AI tooling:* Claude Code (daily), MCP, local models, building agent setups],
   [*Data & APIs:* GraphQL (Apollo), REST, tRPC, Prisma, Postgres, SQL],
   [*Systems & infra:* Linux (NixOS), Docker, config-as-code, Git, CI/CD],

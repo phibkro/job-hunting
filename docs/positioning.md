@@ -75,6 +75,7 @@ band are we applying in".
     produkter, distribuerte systemer og AI-agentplattformer/-verktøy
     (Spond-klassen er oppgradert fra lotteribillett til prioritetsmål);
     support-sekundærbåndet røres ikke.
+- **Work arrangement (revised 2026-11-01):** prefer **40–60% employment**, ideally around 50%, with predictable working days and protected time for independent research; part-time preference is strong but not a universal exclusion of explicitly flexible roles. Target Oslo-area or remote Norway. Prefer software development, technical/research assistant work, sociotechnical/business systems analysis, civic/public-service IT, and technical support as fallback. Prioritize sustainable employment and opportunities to learn about institutional, social and technical systems. Do not silently interpret an advert's unknown workload as 100% or 50%.
 - **Location:** Oslo.
 - Open to adjacent dev roles at near-zero application cost
   (e.g. Spond "søk uten CV" — P-160); with the 2026-08-25 flip these
@@ -86,5 +87,4 @@ band are we applying in".
 - Salary floor
 - Commute radius / remote preference
 - Public vs private sector preference (if any)
-- Full-time only, or vikariat/deltid acceptable? (P-156 is a vikariat
-  to Oct 2027 and made the shortlist — implicitly: vikariat OK?)
+- Exact preferred contractual terms for fixed-term roles / vikariat versus permanent part-time (both may be considered)

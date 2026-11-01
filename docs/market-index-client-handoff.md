@@ -1,6 +1,6 @@
 # Personal job-hunting suite ↔ Norwegian Job Market Index
 
-> **Status: Proposed integration, not implemented.** The shared service proposal is [RFC 0016](https://github.com/phibkro/job-application-assistant/blob/main/docs/internal/rfcs/0016-read-only-norwegian-market-index.md) (link targets main after acceptance/merge); review branch currently holds the proposal. Do not migrate state or switch intake until the read contract and tests are proven.
+> **Status: Proposed integration, not implemented.** Read the indexer's [technical product/project lead handoff](https://github.com/phibkro/job-application-assistant/blob/proposal/read-only-norwegian-market-index-2026-11/docs/internal/product/market-index-lead-handoff.md), [proposed RFC 0016](https://github.com/phibkro/job-application-assistant/blob/proposal/read-only-norwegian-market-index-2026-11/docs/internal/rfcs/0016-read-only-norwegian-market-index.md), and [draft PR #21](https://github.com/phibkro/job-application-assistant/pull/21). These documents currently exist on a **proposal branch, not main**. Do not migrate state or switch intake until the read contract and tests are proven.
 
 ## Goal
 

@@ -1,5 +1,7 @@
 # job-hunting
 
+> **Proposed integration (review pending):** [Personal suite ↔ read-only Norwegian Job Market Index](docs/market-index-client-handoff.md). Existing NAV/FINN intake and Linear/Typst workflows remain in place until an end-to-end replacement is proven.
+
 Pipeline for landing a developer role (primary) or an IT-support role
 (secondary) in Oslo/Norway.
 Tracking lives in Linear ([project **job-hunt**](https://linear.app/phibkro/project/job-hunt-44a5589ca17d), team Personal); documents live here.

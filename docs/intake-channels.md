@@ -1,5 +1,8 @@
 # Intake channels — where listings come from
 
+> **Proposed future integration:** The [read-only indexer client plan](market-index-client-handoff.md) aims to consume verified indexer results instead of duplicating NAV polling after functional parity is demonstrated. The current FINN watcher remains personal-scale and subject to its documented constraints; it is **not** approval for use inside a shared public index.
+
+
 Survey of job platforms for IT/tech-support roles in Oslo, and how to fetch
 from each. Sources: deep-research run 2026-07-06 (101 agents, 19 sources,
 22 claims survived 3-vote adversarial verification) + hands-on finn.no probe.
